@@ -34,14 +34,44 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <link href="css/lsb.css" rel="stylesheet" type="text/css">
     <!-- //gallery -->
     <!-- font-awesome-icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o=" crossorigin="anonymous" />
     <link href="css/font-awesome.css" rel="stylesheet">
     <link href="//fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
     <link href="//fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" integrity="sha256-UK1EiopXIL+KVhfbFa8xrmAWPeBjMVdvYMYkTAEv/HI=" crossorigin="anonymous" />
     <!-- js -->
     <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
     <!-- //js -->
-
+    <style>
+        .thumbnail_slider_area {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            z-index: 1;
+        }
+        
+        .img-slider {
+            max-width: 100%;
+            border: 3px solid #0f0;
+        }
+        
+        .pos {
+            position: relative;
+        }
+        
+        .slick-prev:before {
+            content: "<";
+            color: red;
+            font-size: 30px;
+        }
+        
+        .slick-next:before {
+            content: ">";
+            color: red;
+            font-size: 30px;
+        }
+    </style>
     <!-- start-smooth-scrolling -->
     <script type="text/javascript">
         jQuery(document).ready(function($) {
@@ -56,38 +86,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </head>
 
 <body>
-    <!-- banner -->
-    <!-- <div class="header">
-		
-		<div class="w3layouts_header_right">
-			<div class="detail-w3l">
-			<ul>
-				<li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i> + 1 804-043-3496</li>
-				
-			</ul>
-		</div>
-
-		</div>
-		<div class="w3layouts_header_left">
-			<ul>
-					<li><a href="#" data-toggle="modal" data-target="#myModal2"><i class="fa fa-user" aria-hidden="true"></i>Login</a></li>
-					
-				</ul>
-
-		</div>
-		<div class="agileits-social top_content">
-						<ul>
-							<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-							<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-							<li><a href="#"><i class="fa fa-rss"></i></a></li>
-							<li><a href="#"><i class="fa fa-vk"></i></a></li>
-						</ul>
-					</div>
-
-		<div class="clearfix"> </div>
-	</div> -->
-
-    <div class="banner">
+    <div class="banner" id="home">
         <nav class="navbar navbar-default">
             <div class="navbar-header navbar-left">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -102,17 +101,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
                 <nav class="link-effect-2" id="link-effect-2">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="index.html"><span data-hover="Home">Home</span></a></li>
-                        <li><a href="#"><span data-hover="About Us">About Us</span></a></li>
-                        <li><a href="#"><span data-hover="Services">Services</span></a></li>
-                        <!-- <li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span data-hover="Short Codes">Short Codes</span> <b class="caret"></b></a>
-							<ul class="dropdown-menu agile_short_dropdown">
-								<li><a href="icons.html">Web Icons</a></li>
-								<li><a href="typography.html">Typography</a></li>
-							</ul>
-						</li> -->
-                        <li><a href="#"><span data-hover="Contact Us">Contact Us</span></a></li>
+                        <li class="active"><a href="#home"><span data-hover="Home">Home</span></a></li>
+                        <li><a href="#about"><span data-hover="About Us">About Us</span></a></li>
+                        <li><a href="#trucks"><span data-hover="Trucks">Trucks</span></a></li>
+                        <li><a href="#services"><span data-hover="Services">Services</span></a></li>
+
+                        <li><a href="#contact"><span data-hover="Contact Us">Contact Us</span></a></li>
                     </ul>
                 </nav>
 
@@ -138,54 +132,21 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     </div>
 
 
-    <div class="modal fade" id="myModal2" tabindex="-1" role="dialog">
-        <div class="modal-dialog">
-            <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-
-                    <div class="signin-form profile">
-                        <h3 class="agileinfo_sign">Sign In</h3>
-                        <div class="login-form">
-                            <form action="#" method="post">
-                                <input type="email" name="email" placeholder="E-mail" required="">
-                                <input type="password" name="password" placeholder="Password" required="">
-                                <div class="tp">
-                                    <input type="submit" value="Sign In">
-                                </div>
-                            </form>
-                        </div>
-                        <div class="login-social-grids">
-                            <ul>
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-rss"></i></a></li>
-                            </ul>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- //Modal1 -->
 
 
     <!-- //bootstrap-pop-up -->
-    <div class="w3-about-us">
+    <div class="w3-about-us" id="about">
         <div class="container">
             <div class="w3-headings-all">
                 <h3>Welcome</h3>
             </div>
             <div class="w3-about-text">
                 <p>We the logisticians here are to plan,implement and control procedures for the effective transportaion and storage of your goods,including the services and related information with utmost precision and effectiveness from the point of origin
-                    to the point of consuption,to meet the customer requirements which include inbound,outbound,internal and external movements.Our drivers will deliver anywhere where there is a road,and our customer care team responds anytime 24*7. Here
-                    are some are our services.
+                    to the point of consuption,to meet the customer requirements which include inbound,outbound,internal and external movements.Our drivers will deliver anywhere where there is a road,and our customer care team responds anytime 24*7.
                 </p>
             </div>
 
-            <div class="w3-about-all-grid">
+            <!--   <div class="w3-about-all-grid">
                 <div class="col-md-6 w3-about-grid-left">
                     <ul>
                         <li>
@@ -220,108 +181,176 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 </div>
                 <div class="clearfix"></div>
 
-            </div>
+            </div> -->
 
 
             <!-- /about brief -->
-            <div class="events">
 
-                <div class="col-md-6 w3layouts_event_grid">
-                    <div class="w3_agile_event_grid1">
-                        <img src="images/1986_1.jpg" alt=" " class="img-responsive" />
-                        <!-- <div class="w3_agile_event_grid1_pos">
-                            <p>23 March 2017</p>
-                        </div> -->
-                        <!-- <div class="agile_event_grid1_pos">
-                            <ul>
-                                <li><a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i>18</a></li>
-                                <li><a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i>21</a></li>
-                                <li><a href="#"><i class="fa fa-share" aria-hidden="true"></i>13</a></li>
-                            </ul>
-                        </div> -->
+            <!-- //about brief -->
+
+        </div>
+    </div>
+    <div class="container" id="trucks">
+        <div class="events">
+            <div class="row">
+
+                <div class="col-md-6 w3layouts_event_grid pos">
+                    <div class="">
+                        <div class="banner" id="slider1">
+                            <img src="images/1986_1.jpg" alt=" " class="img-responsive" />
+                            <img src="images/1986_2.jpg" alt=" " class="img-responsive" />
+                            <img src="images/1986_3.jpg" alt=" " class="img-responsive" />
+                            <img src="images/1986_4.jpg" alt=" " class="img-responsive" />
+                            <img src="images/1986_5.jpg" alt=" " class="img-responsive" />
+                            <img src="images/1986_6.jpg" alt=" " class="img-responsive" />
+                            <img src="images/1986_7.jpg" alt=" " class="img-responsive" />
+                            <img src="images/1986_8.jpg" alt=" " class="img-responsive" />
+                            <img src="images/1986_9.jpg" alt=" " class="img-responsive" />
+                            <img src="images/1986_10.jpg" alt=" " class="img-responsive" />
+                        </div>
+
+                        <div class="prev" id="prev1">
+                            <img class="sliderArr" id="sliderLeft" style="left:15px !important;top: 30%;" src="http://i.imgur.com/5aJOioi.png">
+                        </div>
+                        <div class="next" id="next1">
+                            <img class="sliderArr" style="transform:rotate(180deg);right:-5px;top: 30%;" id="sliderRight" src="http://i.imgur.com/5aJOioi.png">
+                        </div>
                     </div>
+                    <div class="clearfix"></div>
+
                     <div class="agileits_w3layouts_event_grid1">
                         <h5><a href="#" data-toggle="modal" data-target="#myModal">1986 International s1900</a></h5>
-                        <h5><a href="#" data-toggle="modal" data-target="#myModal">$9,999</a></h5>
+                        <h5><a href="#" data-toggle="modal" data-target="#myModal" class="text-right">$22,000</a></h5>
                         <p>Very nice , clean, in perfect condition Fuel diesel tank truck, 2200 gallons separated tanks , hose around 50 feet reach , pump working ,everything is in great working shape, 86000 original miles , used to be NEMF fleet company
                             yard truck , clean title in hand Dot ready. </p>
                     </div>
                 </div>
+                <div class="col-md-6 w3layouts_event_grid pos">
+                    <div class="">
+                        <div class="banner" id="slider2">
+                            <img src="images/volvo111.jpg" alt=" " class="img-responsive" />
+                            <img src="images/volvo112.jpg" alt=" " class="img-responsive" />
+                            <img src="images/volvo113.jpg" alt=" " class="img-responsive" />
+                            <img src="images/volvo114.jpg" alt=" " class="img-responsive" />
+                            <img src="images/volvo115.jpg" alt=" " class="img-responsive" />
+                            <img src="images/volvo116.jpg" alt=" " class="img-responsive" />
+                            <img src="images/volvo117.jpg" alt=" " class="img-responsive" />
+                            <img src="images/volvo118.jpg" alt=" " class="img-responsive" />
+                        </div>
 
-
-                <div class="col-md-6 w3layouts_event_grid">
-                    <div class="w3_agile_event_grid1">
-                        <img src="images/volvo1.jpg" alt=" " class="img-responsive" />
-                        <!-- <div class="w3_agile_event_grid1_pos">
-                            <p>25 March 2017</p>
-                        </div> -->
-                        <!-- <div class="agile_event_grid1_pos">
-                            <ul>
-                                <li><a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i>18</a></li>
-                                <li><a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i>21</a></li>
-                                <li><a href="#"><i class="fa fa-share" aria-hidden="true"></i>13</a></li>
-                            </ul>
-                        </div> -->
+                        <div class="prev" id="prev2">
+                            <img class="sliderArr" id="sliderLeft" style="left:15px !important;top: 30%;" src="http://i.imgur.com/5aJOioi.png">
+                        </div>
+                        <div class="next" id="next2">
+                            <img class="sliderArr" style="transform:rotate(180deg);right:-5px;top: 30%;" id="sliderRight" src="http://i.imgur.com/5aJOioi.png">
+                        </div>
                     </div>
+                    <div class="clearfix"></div>
+
+                    <div class="agileits_w3layouts_event_grid1">
+                        <h5><a href="#" data-toggle="modal" data-target="#myModal">2011 Volvo vnl</a></h5>
+                        <h5><a href="#" data-toggle="modal" data-target="#myModal" class="text-right">$22,000</a></h5>
+                        <p>Very nice ,clean semi truck , Volvo D13 engine, 10 speed manual transmission, 631000 miles , well maintained, dot ready , one sleeper ,clean title in hand , has wabasto heater unit , engine harness replaced, injector cups , replaced
+                            ,a lot new parts </p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-md-6 w3layouts_event_grid pos">
+                    <div class="">
+                        <div class="banner" id="slider3">
+                            <img src="images/volvodc1.jpg" alt=" " class="img-responsive" />
+                            <img src="images/volvodc2.jpg" alt=" " class="img-responsive" />
+                            <img src="images/volvodc3.jpg" alt=" " class="img-responsive" />
+                            <img src="images/volvodc4.jpg" alt=" " class="img-responsive" />
+                            <img src="images/volvodc5.jpg" alt=" " class="img-responsive" />
+                            <img src="images/volvodc6.jpg" alt=" " class="img-responsive" />
+                            <img src="images/volvodc7.jpg" alt=" " class="img-responsive" />
+                            <img src="images/volvodc8.jpg" alt=" " class="img-responsive" />
+                            <img src="images/volvodc9.jpg" alt=" " class="img-responsive" />
+                            <img src="images/volvodc10.jpg" alt=" " class="img-responsive" />
+                            <img src="images/volvodc11.jpg" alt=" " class="img-responsive" />
+                        </div>
+
+                        <div class="prev" id="prev3">
+                            <img class="sliderArr" id="sliderLeft" style="left:15px !important;top: 30%;" src="http://i.imgur.com/5aJOioi.png">
+                        </div>
+                        <div class="next" id="next3">
+                            <img class="sliderArr" style="transform:rotate(180deg);right:-5px;top: 30%;" id="sliderRight" src="http://i.imgur.com/5aJOioi.png">
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+
+                    <div class="agileits_w3layouts_event_grid1">
+                        <h5><a href="#" data-toggle="modal" data-target="#myModal">2000 Volvo day cab</a></h5>
+                        <h5><a href="#" data-toggle="modal" data-target="#myModal" class="text-right">$9,999</a></h5>
+                        <p>2000 Volvo cad cab , Detroit series 60 engine , 10 speed manual transmission, Fleet maintained, in great shape ,dot ready, everything works great ! 700 k miles . </p>
+                    </div>
+                </div>
+
+
+                <div class="col-md-6 w3layouts_event_grid pos">
+                    <div class="">
+                        <div class="banner" id="slider4">
+                            <img src="images/volvo2.jpg" alt=" " class="img-responsive" />
+                            <img src="images/volvo1.jpg" alt=" " class="img-responsive" />
+                            <img src="images/volvo3.jpg" alt=" " class="img-responsive" />
+                            <img src="images/volvo4.jpg" alt=" " class="img-responsive" />
+                        </div>
+
+                        <div class="prev" id="prev4">
+                            <img class="sliderArr" id="sliderLeft" style="left:15px !important;top: 30%;" src="http://i.imgur.com/5aJOioi.png">
+                        </div>
+                        <div class="next" id="next4">
+                            <img class="sliderArr" style="transform:rotate(180deg);right:-5px;top: 30%;" id="sliderRight" src="http://i.imgur.com/5aJOioi.png">
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+
                     <div class="agileits_w3layouts_event_grid1">
                         <h5><a href="#" data-toggle="modal" data-target="#myModal">2014 Volvo vnl</a></h5>
                         <h5><a href="#" data-toggle="modal" data-target="#myModal" class="text-right">$29000</a></h5>
                         <p>2014 Volvo D13 Volvo engine , new turbo , Ishift automatic transmission, 401k miles , in really good condition, well maintained by NEMF fleet company, midroof , no rust . </p>
                     </div>
                 </div>
-                <div class="clearfix"></div>
-
-
-                <!--        <div class="col-md-6 w3layouts_event_grid">
-                    <div class="w3_agile_event_grid1">
-                        <img src="images/ab3.jpg" alt=" " class="img-responsive" />
-                        <!-- <div class="w3_agile_event_grid1_pos">
-                            <p>28 March 2017</p>
-                        </div> -->
-                <!-- <div class="agile_event_grid1_pos">
-                            <ul>
-                                <li><a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i>18</a></li>
-                                <li><a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i>21</a></li>
-                                <li><a href="#"><i class="fa fa-share" aria-hidden="true"></i>13</a></li>
-                            </ul>
-                        </div> 
-                    </div>
-                    <div class="agileits_w3layouts_event_grid1">
-                        <h5><a href="#" data-toggle="modal" data-target="#myModal"> dapibus metus</a></h5>
-                        <p>viverra ipsum ac, convallis mauris. Sed quis congue turpis, cursus rhoncus nibh.</p>
-                    </div>
-                </div>
-
-
-                <div class="col-md-6 w3layouts_event_grid">
-                    <div class="w3_agile_event_grid1">
-                        <img src="images/ab4.jpg" alt=" " class="img-responsive" />
-                        <div class="w3_agile_event_grid1_pos">
-                        </div>
-                        <!-- <div class="agile_event_grid1_pos">
-                            <ul>
-                                <li><a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i>18</a></li>
-                                <li><a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i>21</a></li>
-                                <li><a href="#"><i class="fa fa-share" aria-hidden="true"></i>13</a></li>
-                            </ul>
-                        </div> 
-                    </div>
-                    <div class="agileits_w3layouts_event_grid1">
-                        <h5><a href="#" data-toggle="modal" data-target="#myModal">ipsum primis </a></h5>
-                        <p>viverra ipsum ac, convallis mauris. Sed quis congue turpis, cursus rhoncus nibh.</p>
-                    </div>
-                </div>
-                <div class="clearfix"></div> -->
-
-
 
             </div>
-            <!-- //about brief -->
+            <div class="row">
+                <div class="col-md-6 w3layouts_event_grid pos">
+                    <div class="">
+                        <div class="banner" id="slider5">
+                            <img src="images/gd1.jpg" alt=" " class="img-responsive" />
+                            <img src="images/gd2.jpg" alt=" " class="img-responsive" />
+                            <img src="images/gd3.jpg" alt=" " class="img-responsive" />
+                            <img src="images/gd4.jpg" alt=" " class="img-responsive" />
+                            <img src="images/gd5.jpg" alt=" " class="img-responsive" />
+                            <img src="images/gd6.jpg" alt=" " class="img-responsive" />
 
+                        </div>
+
+                        <div class="prev" id="prev5">
+                            <img class="sliderArr" id="sliderLeft" style="left:15px !important;top: 30%;" src="http://i.imgur.com/5aJOioi.png">
+                        </div>
+                        <div class="next" id="next5">
+                            <img class="sliderArr" style="transform:rotate(180deg);right:-5px;top: 30%;" id="sliderRight" src="http://i.imgur.com/5aJOioi.png">
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+
+                    <div class="agileits_w3layouts_event_grid1">
+                        <h5><a href="#" data-toggle="modal" data-target="#myModal">2009 Great Dane great dane</a></h5>
+                        <h5><a href="#" data-toggle="modal" data-target="#myModal" class="text-right">$14,000</a></h5>
+                        <p>2009 GREAT DANE Aluminum Reefer, 53 Ft. Long, 102 Inches Wide, 13 Ft. 6 Inches High, Carrier X2 2100A Unit, 12,026 Hours, Heavy Duty Floor, Scuff Plate, E-Track, Stainless Steel Door Frame, Rear Vent, Cold Chute, Swing Doors, Air
+                            Ride Suspension, Sliding Tandem, 22.5 Low Profile Tires, Disc Wheels. 1GRAA06269S701403 </p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+
     <!-- services -->
-    <div class="w3-agile-services">
+    <div class="w3-agile-services" id="services">
         <div class="container">
             <div class="w3-headings-all">
                 <h3>Services</h3>
@@ -333,9 +362,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             <i class="fa fa-truck" aria-hidden="true"></i>
                         </div>
                         <div class="services-icon-info">
-                            <h5>Service 1</h5>
-                            <p>Service 1 details</p>
-                            <h4><a href="#" data-toggle="modal" data-target="#myModal11">Read more</a></h4>
+                            <h5>International Logistics</h5>
+                            <p> We offer expedited Internationl Shipping service at unbelievable costs. Just sit back and watch your package teleport to its destination.</p>
+                            <!--                             <h4><a href="#" data-toggle="modal" data-target="#myModal11">Read more</a></h4>
+ -->
                         </div>
                     </div>
                     <div class="col-sm-4 services-right-grid">
@@ -343,9 +373,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             <i class="fa fa-subway" aria-hidden="true"></i>
                         </div>
                         <div class="services-icon-info">
-                            <h5>Service 2</h5>
-                            <p>Service 2 details</p>
-                            <h4><a href="#" data-toggle="modal" data-target="#myModal11">Read more</a></h4>
+                            <h5>National Shipment</h5>
+                            <p>Want to ship something to other states? EZ Trucks LLC is the name to trust. We offer round the clock shipping services at an unbelievable tariffs.</p>
+                            <!--                             <h4><a href="#" data-toggle="modal" data-target="#myModal11">Read more</a></h4>
+ -->
                         </div>
                     </div>
                     <div class="col-sm-4 services-right-grid">
@@ -353,9 +384,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             <i class="fa fa-ship" aria-hidden="true"></i>
                         </div>
                         <div class="services-icon-info">
-                            <h5>Service 3</h5>
-                            <p>Service 3 details</p>
-                            <h4><a href="#" data-toggle="modal" data-target="#myModal11">Read more</a></h4>
+                            <h5>Hyperlocal Deliveries</h5>
+                            <p>Want to deliver your products to clients without facing an hassles? Let us take care of your worries with our Hyperlocal Delivery services.</p>
+                            <!--                             <h4><a href="#" data-toggle="modal" data-target="#myModal11">Read more</a></h4>
+ -->
                         </div>
                     </div>
                     <div class="clearfix"> </div>
@@ -365,92 +397,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         </div>
     </div>
     <!-- //services -->
-    <!-- modal -->
-    <div class="modal about-modal fade" id="myModal11" tabindex="-1" role="dialog">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="span1" aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title"> EzTrucks LLC</h4>
-                </div>
-                <div class="modal-body">
-                    <div class="agileits-w3layouts-info">
-                        <img src="images/m1.jpg" alt="" />
-                        <p>Some info here</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- //modal -->
 
-    <!-- /our advantages -->
-    <!-- <div class="w3-advantages" id="advantages">
-        <div class="container">
-            <div class="w3-headings-all">
-                <h3>Latest News</h3>
-            </div>
-            <div class="w3-adv-grids">
-                <div class="col-md-6 w3-adv-left1">
-                    <div class="w3-adv-lef1-text">
-                        <h3>Donec quis</h3>
-                        <p>hendrerit nunc</p>
-                    </div>
-                    <div class="w3-adv-lef1-text2">
-                        <p><span>"</span>Praesent tristique nisi quis ultricies facilisis. Integer molestie nisl eros, eget rhoncus dolor porttitor eu. Nullam imperdiet dolor nibh, in pulvinar quam commodo efficitur<span>"</span></p>
-                        <p><span>"</span>Praesent tristique nisi quis ultricies facilisis. Integer molestie nisl eros, eget rhoncus dolor porttitor eu. Nullam imperdiet dolor nibh, in pulvinar quam commodo efficitur<span>"</span></p>
-                        <h4>Praesent tristique nisi quis tristique nisi </h4>
-                    </div>
-                </div>
-                <div class="col-md-6 w3-adv-right1">
-                </div>
-                <div class="clearfix"></div>
-                <div class="col-md-6 w3-adv-left2">
-                </div>
-                <div class="col-md-6 w3-adv-right2">
-                    <div class="w3-adv-right2-text">
-                        <h3>Donec quis</h3>
-                        <p>hendrerit nunc </p>
-                    </div>
-                    <div class="w3-adv-right2-text-para">
-                        <p>Praesent tristique nisi quis ultricies facilisis. Integer molestie nisl eros, eget rhoncus dolor porttitor eu. Nullam imperdiet dolor nibh, in pulvinar quam commodo efficitur</p>
-                    </div>
-                    <div class="w3-adv-right2-icons">
-                        <p><i class="fa fa-plane" aria-hidden="true"></i>Lorem ipsum</p>
-                        <p><i class="fa fa-sitemap" aria-hidden="true"></i>Rarpe ipsum</p>
-                        <p><i class="fa fa-crosshairs" aria-hidden="true"></i>Param ipsum</p>
-                        <p><i class="fa fa-globe" aria-hidden="true"></i>Dunke ipsum</p>
-                    </div>
-                </div>
-                <div class="clearfix"></div>
-            </div>
-        </div>
-    </div> -->
-    <!-- //our advantages -->
-    <!-- /Subscribe -->
-    <!-- subscribe -->
-    <!-- <div class="subscribe">
-        <div class="container">
-            <div class=" col-md-6 agileits-title">
-                <h6>- Subscribe our</h6>
-                <h3>Newsletter</h3>
-            </div>
-            <div class=" col-md-6 agileits-title-right">
-                <form action="#" method="post">
-                    <input type="email" name="email" placeholder="Enter your Email..." required="">
-                    <input type="submit" value="Subscribe">
-                </form>
-                <div class="clearfix"> </div>
-            </div>
-        </div>
-    </div> -->
-    <!-- //subscribe -->
     <!-- /footer-contact -->
-    <div class="w3-footer-contact">
+    <div class="w3-footer-contact" id="contact">
         <div class="container">
             <div class="col-md-4 w3-footer-contact-left">
                 <h3>EZ Trucks LLC</h3>
-                <p>Here will be company introduction</p>
+                <p>Nobody understands your shipping needs better than EZ Trucks LLC, a name that has made shipping a scientific art. Leave all your shipping worries to us; just handover the package and witness an experience that is beyond imagination.</p>
             </div>
             <div class="col-md-4 w3-footer-contact-middle">
                 <img src="images/v1.jpg" alt="img">
@@ -461,7 +414,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 </div>
                 <div class="col-md-10 w3-footer-contact-info">
                     <p>Location:</p>
-                    <h4>Company Address</h4>
+                    <h4>New Jersey,USA</h4>
 
                 </div>
                 <div class="clearfix"></div>
@@ -469,9 +422,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <i class="fa fa-volume-control-phone" aria-hidden="true"></i>
                 </div>
                 <div class="col-md-10 w3-footer-contact-info">
-                    <p>call:</p>
-                    <h4>Company Contact</h4>
-
+                    <p>Call:</p>
+                    <h4>+1 (917) 916-6065</h4>
                 </div>
                 <div class="clearfix"></div>
                 <div class="col-md-2 w3-footer-contact-icon1">
@@ -479,84 +431,64 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 </div>
                 <div class="col-md-10 w3-footer-contact-info">
                     <p>Email:</p>
-                    <h4><a href="mailto:example@mail.com"> Company Email</a></h4>
+                    <h4><a href="mailto:eztrucksllc@gmail.com">eztrucksllc@gmail.com</a></h4>
 
                 </div>
                 <div class="clearfix"></div>
             </div>
             <div class="clearfix"></div>
 
-
-            <!-- partners -->
-            <!-- <div class="team gallery-ban" id="team">
-
-                <ul id="flexiselDemo1">
-                    <li>
-                        <div class="wthree_testimonials_grid_main">
-
-                            <img src="images/f1.png" alt=" " class="img-responsive" />
-
-                        </div>
-                    </li>
-                    <li>
-                        <div class="wthree_testimonials_grid_main">
-
-                            <img src="images/f2.png" alt=" " class="img-responsive" />
-
-                        </div>
-                    </li>
-                    <li>
-                        <div class="wthree_testimonials_grid_main">
-
-                            <img src="images/f3.png" alt=" " class="img-responsive" />
-
-                        </div>
-                    </li>
-                    <li>
-                        <div class="wthree_testimonials_grid_main">
-
-                            <img src="images/f51.png" alt=" " class="img-responsive" />
-
-                        </div>
-                    </li>
-                    <li>
-                        <div class="wthree_testimonials_grid_main">
-
-                            <img src="images/f5.png" alt=" " class="img-responsive" />
-
-                        </div>
-                    </li>
-                    <li>
-                        <div class="wthree_testimonials_grid_main">
-
-                            <img src="images/f6.png" alt=" " class="img-responsive" />
-
-                        </div>
-                    </li>
-                </ul>
-
-            </div> -->
         </div>
-        <!-- //partners -->
-
     </div>
-
-    <!-- //footer-contact -->
-    <!--     <div class="footer-final">
-        <div class="copyw3-agile">
-            <div class="container">
-                <p>&copy; 2018 Trucking. All rights reserved | Design by <a href="http://w3layouts.com/">W3layouts</a></p>
-            </div>
-        </div>
-    </div> -->
-
-
     <script src="js/mainScript.js"></script>
     <script src="js/rgbSlide.min.js"></script>
-
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" integrity="sha256-NXRS8qVcmZ3dOv3LziwznUHPegFhPZ1F/4inU7uC8h0=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/js/all.min.js" integrity="sha256-+Q/z/qVOexByW1Wpv81lTLvntnZQVYppIL1lBdhtIq0=" crossorigin="anonymous"></script>
     <!--team-->
     <script type="text/javascript">
+        $(document).ready(function() {
+
+            var sliders = {
+                1: {
+                    slider: '#slider1',
+                    prev: '#prev1',
+                    next: '#next1'
+                },
+                2: {
+                    slider: '#slider2',
+                    prev: '#prev2',
+                    next: '#next2'
+                },
+                3: {
+                    slider: '#slider3',
+                    prev: '#prev3',
+                    next: '#next3'
+                },
+                4: {
+                    slider: "#slider4",
+                    prev: '#prev4',
+                    next: '#next4'
+                },
+                5: {
+                    slider: "#slider5",
+                    prev: '#prev5',
+                    next: '#next5'
+                }
+            };
+
+            $.each(sliders, function() {
+                console.log(this);
+                $(this.slider).slick({
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    arrows: true,
+                    fade: true,
+                    prevArrow: $(this.prev),
+                    nextArrow: $(this.next)
+                });
+            });
+        });
+
         $(window).load(function() {
             $("#flexiselDemo1").flexisel({
                 visibleItems: 4,
@@ -581,6 +513,59 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 }
             });
 
+
+            /* 
+                        // Select all links with hashes
+                        $('a[href*="#"]')
+                            // Remove links that don't actually link to anything
+                            .not('[href="#"]')
+                            .not('[href="#0"]')
+                            .click(function(event) {
+                                // On-page links
+                                if (
+                                    location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') &&
+                                    location.hostname == this.hostname
+                                ) {
+                                    // Figure out element to scroll to
+                                    var target = $(this.hash);
+                                    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                                    // Does a scroll target exist?
+                                    if (target.length) {
+                                        // Only prevent default if animation is actually gonna happen
+                                        event.preventDefault();
+                                        $('html, body').animate({
+                                            scrollTop: target.offset().top
+                                        }, 1000, function() {
+                                            // Callback after animation
+                                            // Must change focus!
+                                            var $target = $(target);
+                                            $target.focus();
+                                            if ($target.is(":focus")) { // Checking if the target was focused
+                                                return false;
+                                            } else {
+                                                $target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
+                                                $target.focus(); // Set focus again
+                                            };
+                                        });
+                                    }
+                                }
+                            });
+
+
+             */
+
+            $('a[href^="#"]').on('click', function(e) {
+                e.preventDefault();
+
+                var target = this.hash,
+                    $target = $(target);
+
+                $('html, body').stop().animate({
+                    'scrollTop': $target.offset().top - 80
+                }, 900, 'swing', function() {
+                    window.location.hash = target;
+                });
+            });
         });
     </script>
     <script type="text/javascript" src="js/jquery.flexisel.js"></script>
