@@ -479,6 +479,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             $.each(sliders, function() {
                 console.log(this);
                 $(this.slider).slick({
+                    autoplay: true,
+                    autoplaySpeed: 1500,
+                    pauseOnHover: true,
+                    pauseOnFocus: true,
                     slidesToShow: 1,
                     slidesToScroll: 1,
                     arrows: true,
